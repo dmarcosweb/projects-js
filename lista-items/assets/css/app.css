@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background: linear-gradient(
+            rgba(152, 166, 166, 0.6),
+            rgba(152, 166, 166, 0.6)
+        ),
+        url(../image/image.jpg) center/cover no-repeat;
+    line-height: 1.5;
+    font-family: 'Rajdhani', sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+img:not(.logo) {
+    width: 100%;
+}
+img {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 0.1rem;
+    font-family: 'Rajdhani', sans-serif;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.25rem;
+}
+h4 {
+    font-size: 0.875rem;
+}
+p {
+    margin-bottom: 1.25rem;
+    color: #721c24;
+}
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    background: transparent;
+    color: #222;
+    padding: 0.375rem 0.75rem;
+    letter-spacing: 5px;
+    display: inline-block;
+    transition: 1s ease-in-out;
+    font-size: 1.5rem;
+    border: 2px solid darkred;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+    border-radius: var(--radius);
+}
+.btn:hover {
+    color: var(--clr-white);
+    background: var(--clr-black);
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 35rem;
+    margin-top: 8rem;
+}
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vw;
+    }
+}
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.section-center {
+    background: rgba(166, 166, 166, 0.9);
+    border-radius: 20px;
+    transition: 0.5s ease-in;
+    padding: 2rem;
+}
+
+.alert {
+    margin-bottom: 1rem;
+    height: 1.25rem;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 0.7rem;
+    border-radius: 0.25rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.alert-danger {
+    color: #721c24;
+    background: #f8d7da;
+}
+.alert-success {
+    color: #155724;
+    background: #d4edda;
+}
+.grocery-form h3 {
+    color: #155724;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.form-control {
+    display: flex;
+    justify-content: center;
+}
+#grocery {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    background: #eee;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-color: transparent;
+    font-size: 1rem;
+    flex: 1 0 auto;
+    color: red;
+}
+#grocery::placeholder {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--clr-grey-5);
+}
+.submit-btn {
+    background: #727070;
+    border-color: transparent;
+    flex: 0 0 5rem;
+    display: grid;
+    align-items: center;
+    padding: 0.25rem;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    content: var(--clr-primary-5);
+    transition: 0.5s ease-in-out;
+    font-size: 0.85rem;
+}
+.submit-btn:hover {
+    background: #444;
+}
+
+.grocery-container {
+    margin-top: 2rem;
+    transition: 0.5s ease-in;
+    visibility: hidden;
+}
+.show-container {
+    visibility: visible;
+}
+.grocery-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    transition: 0.5s ease;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+.grocery-item:hover {
+    color: #ccc;
+    background: #777;
+}
+.grocery-item:hover .title {
+    color: #fff;
+}
+.title {
+    margin-bottom: 0;
+    color: #222;
+    letter-spacing: 2px;
+    transition: 0.5s ease;
+}
+.edit-btn,
+.delete-btn {
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin: 0 0.15rem;
+    transition: 0.5s ease-in-out;
+}
+.edit-btn {
+    color: darkolivegreen;
+    font-size: 1rem;
+}
+.edit-btn:hover {
+    color: #0c1d10;
+}
+.delete-btn {
+    color: darkred;
+    font-size: 1rem;
+}
+.delete-btn:hover {
+    color: red;
+}
+.clear-btn {
+    text-transform: capitalize;
+    width: 10rem;
+    height: 1.5rem;
+    display: grid;
+    align-items: center;
+    background: transparent;
+    border-color: transparent;
+    color: darkred;
+    margin: 0 auto;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin-top: 1.25rem;
+}
+.clear-btn:hover {
+    color: #721c24;
+}
